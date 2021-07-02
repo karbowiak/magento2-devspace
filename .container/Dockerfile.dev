@@ -1,0 +1,115 @@
+FROM ubuntu:20.04
+
+# Run as root
+USER root
+
+# Install the PHP PPA
+RUN apt update && \
+  apt upgrade -y && \
+  apt install -y software-properties-common curl unzip && \
+  add-apt-repository -y ppa:ondrej/php
+
+# Install nginx and various other requirements
+RUN apt install -y \
+  nginx \
+  mysql-client \
+  nodejs \
+  npm \
+  wget \
+  sendmail \
+  sendmail-bin \
+  python3 \
+  python3-pip
+
+# Install PyYAML
+RUN pip3 install --upgrade setuptools && pip3 install pyyaml
+
+# Install Grunt
+RUN npm install -g grunt-cli
+
+# Install all the PHP Packages
+RUN apt install -y php7.4 php7.4-readline php7.4-cli php7.4-common \
+  php7.4-dev \
+  php7.4-decimal \
+  php7.4-mbstring \
+  php7.4-igbinary \
+  php7.4-apcu \
+  php7.4-imagick \
+  php7.4-protobuf \
+  php7.4-sqlite3 \
+  php7.4-ast \
+  php7.4-yaml \
+  php7.4-bcmath \
+  php7.4-inotify \
+  php7.4-mysql \
+  php7.4-mysqlnd \
+  php7.4-mysqli \
+  php7.4-psr \
+  php7.4-zip \
+  php7.4-bz2 \
+  php7.4-gd \
+  php7.4-msgpack \
+  php7.4-raphf \
+  php7.4-intl \
+  php7.4-uuid \
+  php7.4-zstd \
+  php7.4-redis \
+  php7.4-lz4 \
+  php7.4-curl \
+  php7.4-opcache \
+  php7.4-xhprof \
+  php7.4-xml \
+  php7.4-soap \
+  php7.4-fpm \
+  php7.4-xdebug
+
+# Make Xdebug actually call out
+RUN echo "xdebug.start_with_request = yes" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+  echo "xdebug.client_host=127.0.0.1" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+  echo "xdebug.client_port = 9003" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+  echo "xdebug.mode = develop,debug" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini
+
+# Install CLI tools
+RUN apt install -y nano git zsh iputils-ping net-tools && \
+  echo 'root:root' | chpasswd && \
+  chsh -s $(which zsh) && \
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install Supervisor
+COPY --from=ochinchina/supervisord:latest /usr/local/bin/supervisord /usr/local/bin/supervisord
+COPY .container/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Copy nginx config
+COPY .container/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY .container/nginx/www.conf /etc/nginx/conf.d/www.conf
+
+# Copy FPM Config
+COPY .container/fpm/fpm.conf /etc/php/7.4/fpm/php-fpm.conf
+COPY .container/fpm/www.conf /etc/php/7.4/fpm/pool.d/www.conf
+COPY .container/fpm/fpm.sh /etc/fpm.sh
+RUN chmod 777 /etc/fpm.sh && chmod +x /etc/fpm.sh
+
+# Switch working directory
+WORKDIR /var/www
+
+# Install composer
+RUN wget https://getcomposer.org/composer-stable.phar && \
+  mv composer-stable.phar /usr/local/bin/composer && \
+  chmod +x /usr/local/bin/composer
+
+# Install Magerun
+RUN wget https://files.magerun.net/n98-magerun2.phar && \
+  mv n98-magerun2.phar /usr/local/bin/magerun2 && \
+  chmod +x /usr/local/bin/magerun2
+
+# Copy source code
+COPY . ./
+
+# Install dependencies (--no-dev ?)
+RUN composer install -o
+
+# Cleanup the container image
+RUN apt clean && apt autoclean -y && apt autoremove -y && rm -rf /var/lib/{apt,dpkg,cache,log}/
+
+# Start supervisor
+ENTRYPOINT ["/usr/local/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
