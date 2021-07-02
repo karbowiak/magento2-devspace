@@ -1,90 +1,91 @@
-<p align="center">
-    <a href="https://magento.com">
-        <img src="https://static.magento.com/sites/all/themes/magento/logo.svg" width="300px" alt="Magento Commerce" />
-    </a>
-    <br />
-    <br />
-    <a href="https://www.codetriage.com/magento/magento2">
-        <img src="https://www.codetriage.com/magento/magento2/badges/users.svg" alt="Open Source Helpers" />
-    </a>
-    <a href="https://gitter.im/magento/magento2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
-        <img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter" />
-    </a>
-    <a href="https://crowdin.com/project/magento-2">
-        <img src="https://d322cqt584bo4o.cloudfront.net/magento-2/localized.svg" alt="Crowdin" />
-    </a>
-</p>
+# What is Devspace
+Devspace is a tool to build, run and develop using Kubernetes.
 
-# Welcome
+Devspace in this instance will setup:
 
-Welcome to Magento 2 installation! We're glad you chose to install Magento 2, a cutting-edge, feature-rich eCommerce solution that gets results.
+- Web (Using nginx + fpm + supervisor) (7.4)
+- Redis
+- MySQL (MariaDB 10.4 Galera)
+- Elasticsearch
+- RabbitMQ
+- PHPMyAdmin
+- RedisAdmin
+- Mailhog
+- Kibana
 
-## Magento System Requirements
+# How to install Devspace
+Simply install NodeJS and NPM first, then use npm install -g devspace
 
-[Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
+If your environment is set up correctly, you can now type devspace and it should just work, otherwise refer to https://devspace.sh/cli/docs/getting-started/installation
 
-## Install Magento
+# How to use Devspace
 
-* [Installation Guide](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html).
+To use Devspace you need a local (or remote) Kubernetes cluster ready to go.
 
-## Learn More About GraphQL in Magento 2
+This can be done in a few ways.
 
-* [GraphQL Developer Guide](https://devdocs.magento.com/guides/v2.4/graphql/index.html)
+## Windows
+- Enable Kubernetes in the Docker For Windows preferences panel.
+- Install Minikube
 
-## Contributing to the Magento 2 Code Base
+## MacOS
+- Enable Kubernetes in the Docker For Mac preferences panel.
+- Install Minikube
 
-Contributions can take the form of new components or features, changes to existing features, tests, documentation (such as developer guides, user guides, examples, or specifications), bug fixes, optimizations, or just good suggestions.
+## Linux
+- Install Minikube
+- Use Ubuntu and install microk8s:
+  - run sudo snap install microk8s, and setup with microk8s status
 
-To learn about how to contribute, click [here][1].
+## Remote
 
-To learn about issues, click [here][2]. To open an issue, click [here][3].
+Follow procedures outlined at the remote for how to get connected. Usually involves installing kubectl locally, and changing the `~/.kube/config` file
 
-To suggest documentation improvements, click [here][4].
+Once Kubernetes is setup and responds to a `kubectl get po -A` (microk8s: `microk8s kubectl get po -A`) you can simply do the following:
 
-[1]: https://devdocs.magento.com/guides/v2.4/contributor-guide/contributing.html
-[2]: https://devdocs.magento.com/guides/v2.4/contributor-guide/contributing.html#report
-[3]: https://github.com/magento/magento2/issues
-[4]: https://devdocs.magento.com
+1. `kubectl create namespace <namespace>`
+2. `devspace use namespace <namespace>`
+2. `devspace dev -b`
 
-### Community Maintainers
+This will build the containers and launch everything up.
+This will also set up synchronization of files and ports from the cluster to the host.
 
-The members of this team have been recognized for their outstanding commitment to maintaining and improving Magento. Magento has granted them permission to accept, merge, and reject pull requests, as well as review issues, and thanks to these Community Maintainers for their valuable contributions.
+# XDebug
+XDebug is enabled and sending back signals on port 9003 using XDebug version 3.
 
-[![](https://raw.githubusercontent.com/wiki/magento/magento2/images/maintainers.png)](https://magento.com/magento-contributors#maintainers)
+# Devspace URLs
+## HTTP Services
+- Site: http://magento2.microk8s.local/
+- Admin: http://magento2.microk8s.local/admin
+- PHPMyAdmin: http://127.0.0.1:8070
+- RedisAdmin: http://127.0.0.1:8060
+- Mailhog: http://127.0.0.1:8025
+- Kibana: http://127.0.0.1:5601
+- RabbitMQ: http://127.0.0.1:15672
 
-### Top Contributors
+## Non HTTP services:
+- MySQL: localhost:3306
+- Redis: localhost:6379
+- Elasticsearch: localhost:9300 and localhost:9200
+- RabbitMQ: localhost:5672
+- Mailhog: localhost:1025
 
-Magento is thankful for any contribution that can improve our codebase, documentation or increase test coverage. We always recognize our most active members, as their contributions are the foundation of the Magento Open Source platform.
+# How to get login for PHPMyAdmin
 
-[![](https://raw.githubusercontent.com/wiki/magento/magento2/images/contributors.png)](https://magento.com/magento-contributors)
+Open a terminal and type devspace print, then scroll up to the top.
 
-### Labels Applied by the Magento Team
+## If no changes:
+- phpmyadmin: root / rootpw
 
-We apply labels to public Pull Requests and Issues to help other participants retrieve additional information about current progress, component assignments, Magento release lines, and much more.
-Please review the [Code Contributions guide](https://devdocs.magento.com/guides/v2.4/contributor-guide/contributing.html#labels) for detailed information on labels used in Magento 2 repositories.
+# How to interact with containers
 
-## Reporting Security Issues
+The simple way is to look in the DevSpace DevUI, you can select to enter containers there and do stuff.
 
-To report security vulnerabilities or learn more about reporting security issues in Magento software or web sites visit the [Magento Bug Bounty Program](https://hackerone.com/magento) on hackerone. Please create a hackerone account [there](https://hackerone.com/magento) to submit and follow-up on your issue.
+If you want to enter the CLI of the Web container, simply run: `devspace run cli`
 
-Stay up-to-date on the latest security news and patches for Magento by signing up for [Security Alert Notifications](https://magento.com/security/sign-up).
+# Installation
+To install the bare developer setup, you simply run: `devspace run importdb` to import the bare db, and after that it should all be up and running
 
-## License
-
-Each Magento source file included in this distribution is licensed under OSL 3.0 or the Magento Enterprise Edition (MEE) license.
-
-[Open Software License (OSL 3.0)](https://opensource.org/licenses/osl-3.0.php).
-Please see [LICENSE.txt](https://github.com/magento/magento2/blob/2.4-develop/LICENSE.txt) for the full text of the OSL 3.0 license or contact license@magentocommerce.com for a copy.
-
-Subject to Licensee's payment of fees and compliance with the terms and conditions of the MEE License, the MEE License supersedes the OSL 3.0 license for each source file.
-Please see LICENSE_EE.txt for the full text of the MEE License or visit <https://magento.com/legal/terms/enterprise>.
-
-## Community Engineering Slack
-
-To connect with Magento and the Community, join us on the [Magento Community Engineering Slack](https://magentocommeng.slack.com). If you are interested in joining Slack, or a specific channel, send us a request at [engcom@adobe.com](mailto:engcom@adobe.com) or [self signup](https://opensource.magento.com/slack).
-
-We have channels for each project. These channels are recommended for new members:
-
-* [general](https://magentocommeng.slack.com/messages/C4YS78WE6): Open chat for introductions and Magento 2 questions
-* [github](https://magentocommeng.slack.com/messages/C7KB93M32): Support for GitHub issues, pull requests, and processes
-* [public-backlog](https://magentocommeng.slack.com/messages/CCV3J3RV5): Discussions of the Magento 2 backlog
+# Admin panel user/pass using bare database
+username: admin
+password: password123

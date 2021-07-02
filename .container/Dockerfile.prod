@@ -38,7 +38,6 @@ RUN apt install -y php7.4 php7.4-readline php7.4-cli php7.4-common \
   php7.4-mysql \
   php7.4-mysqlnd \
   php7.4-mysqli \
-  php7.4-psr \
   php7.4-zip \
   php7.4-bz2 \
   php7.4-gd \

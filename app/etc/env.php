@@ -40,13 +40,51 @@ return [
     'session' => [
         'save' => 'files'
     ],
+    'session' => [
+        'save' => 'redis',
+        'redis' => [
+            'host' => 'redis-master.magento2.svc.cluster.local',
+            'port' => '6379',
+            'password' => 'redis',
+            'timeout' => '2.5',
+            'persistent_identifier' => '',
+            'database' => '1',
+            'compression_threshold' => '2048',
+            'compression_library' => 'gzip',
+            'log_level' => '3',
+            'max_concurrency' => '150',
+            'break_after_frontend' => '5',
+            'break_after_adminhtml' => '30',
+            'first_lifetime' => '600',
+            'bot_first_lifetime' => '60',
+            'bot_lifetime' => '7200',
+            'disable_locking' => '0',
+            'min_lifetime' => '60',
+            'max_lifetime' => '2592000'
+        ]
+    ],
     'cache' => [
         'frontend' => [
             'default' => [
-                'id_prefix' => 'a7d_'
+                'id_prefix' => 'a7d_',
+                'backend' => 'Cm_Cache_Backend_Redis',
+                'backend_options' => [
+                    'server' => 'redis-master.magento2.svc.cluster.local',
+                    'port' => '6379',
+                    'password' => 'redis',
+                    'database' => '2'
+                ]
             ],
             'page_cache' => [
-                'id_prefix' => 'a7d_'
+                'id_prefix' => 'a7d_',
+                'backend' => 'Cm_Cache_Backend_Redis',
+                'backend_options' => [
+                    'server' => 'redis-master.magento2.svc.cluster.local',
+                    'port' => '6379',
+                    'password' => 'redis',
+                    'database' => '3',
+                    'compress_data' => '0'
+                ]
             ]
         ],
         'allow_parallel_generation' => false
@@ -62,24 +100,33 @@ return [
     ],
     'cache_types' => [
         'config' => 1,
-        'layout' => 1,
-        'block_html' => 1,
-        'collections' => 1,
-        'reflection' => 1,
-        'db_ddl' => 1,
-        'compiled_config' => 1,
-        'eav' => 1,
-        'customer_notification' => 1,
-        'config_integration' => 1,
-        'config_integration_api' => 1,
-        'full_page' => 1,
-        'config_webservice' => 1,
-        'translate' => 1
+        'layout' => 0,
+        'block_html' => 0,
+        'collections' => 0,
+        'reflection' => 0,
+        'db_ddl' => 0,
+        'compiled_config' => 0,
+        'eav' => 0,
+        'customer_notification' => 0,
+        'config_integration' => 0,
+        'config_integration_api' => 0,
+        'full_page' => 0,
+        'config_webservice' => 0,
+        'translate' => 0
     ],
     'downloadable_domains' => [
-
+        'magento2.microk8s.local'
     ],
     'install' => [
         'date' => 'Fri, 02 Jul 2021 20:53:38 +0000'
+    ],
+    'system' => [
+        'default' => [
+            'dev' => [
+                'debug' => [
+                    'debug_logging' => null
+                ]
+            ]
+        ]
     ]
 ];

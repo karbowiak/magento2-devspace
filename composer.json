@@ -100,8 +100,7 @@
         ],
         "psr-0": {
             "": [
-                "app/code/",
-                "generated/code/"
+                "app/code/"
             ]
         },
         "psr-4": {
@@ -124,7 +123,7 @@
         "phpstan/phpstan": ">=0.12.3 <=0.12.23",
         "phpunit/phpunit": "^9",
         "sebastian/phpcpd": "~5.0.0",
-        "squizlabs/php_codesniffer": "~3.5.4"
+        "squizlabs/php_codesniffer": "^3.6"
     },
     "conflict": {
         "gene/bluefoot": "*"
