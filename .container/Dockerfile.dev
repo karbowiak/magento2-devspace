@@ -68,6 +68,22 @@ RUN echo "xdebug.start_with_request = no" >> /etc/php/7.4/cli/conf.d/20-xdebug.i
   echo "xdebug.client_port = 9003" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
   echo "xdebug.mode = develop,debug" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini
 
+# Enable PHP7.4 Opcache for CLI and for FPM
+RUN echo "opcache.memory_consumption=1024" >> /etc/php/7.4/cli/php.ini && \
+echo "opcache.interned_strings_buffer=256" >> /etc/php/7.4/cli/php.ini && \
+echo "opcache.max_accelerated_files=30000" >> /etc/php/7.4/cli/php.ini && \
+echo "opcache.validate_timestamps=1" >> /etc/php/7.4/cli/php.ini && \
+echo "opcache.enable=1" >> /etc/php/7.4/cli/php.ini && \
+echo "opcache.enable_cli=1" >> /etc/php/7.4/cli/php.ini && \
+echo "opcache.memory_consumption=1024" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.interned_strings_buffer=256" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.max_accelerated_files=30000" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.validate_timestamps=1" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.enable=1" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.enable_cli=1" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.preload=/var/www/preload.php" >> /etc/php/7.4/fpm/php.ini && \
+echo "opcache.preload_user=root" >> /etc/php/7.4/cli/php.ini
+
 # Install CLI tools
 RUN apt install -y nano git zsh iputils-ping net-tools && \
   echo 'root:root' | chpasswd && \

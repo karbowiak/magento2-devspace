@@ -73,3 +73,6 @@ atlassian*
 
 # Ignore devspace
 .devspace/
+
+# Ignore preload.php since it comes from composer
+preload.php
