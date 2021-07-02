@@ -89,6 +89,3 @@ To install the bare developer setup, you simply run: `devspace run importdb` to 
 # Admin panel user/pass using bare database
 username: admin
 password: password123
-
-# Composer preload
-genereate preloading file with: `composer preload`
