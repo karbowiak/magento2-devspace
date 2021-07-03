@@ -19,13 +19,14 @@ RUN apt install -y \
   sendmail \
   sendmail-bin \
   python3 \
-  python3-pip
+  python3-pip \
+  libnss3
 
 # Install PyYAML
 RUN pip3 install --upgrade setuptools && pip3 install pyyaml
 
-# Install Grunt
-RUN npm install -g grunt-cli
+# Install Grunt and MagePack
+RUN npm install -g grunt-cli magepack --unsafe-perm=true
 
 # Install all the PHP Packages
 RUN apt install -y php7.4 php7.4-readline php7.4-cli php7.4-common \
@@ -59,14 +60,14 @@ RUN apt install -y php7.4 php7.4-readline php7.4-cli php7.4-common \
   php7.4-xhprof \
   php7.4-xml \
   php7.4-soap \
-  php7.4-fpm \
-  php7.4-xdebug
+  php7.4-fpm
+#  php7.4-xdebug
 
 # Make Xdebug actually call out
-RUN echo "xdebug.start_with_request = no" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
-  echo "xdebug.client_host=127.0.0.1" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
-  echo "xdebug.client_port = 9003" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
-  echo "xdebug.mode = debug" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini
+#RUN echo "xdebug.start_with_request = no" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+#  echo "xdebug.client_host=127.0.0.1" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+#  echo "xdebug.client_port = 9003" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+#  echo "xdebug.mode = debug" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini
 
 # Enable PHP7.4 Opcache for CLI and for FPM
 RUN echo "opcache.memory_consumption=1024" >> /etc/php/7.4/cli/php.ini && \
@@ -88,7 +89,8 @@ echo "opcache.preload_user=root" >> /etc/php/7.4/cli/php.ini
 RUN apt install -y nano git zsh iputils-ping net-tools && \
   echo 'root:root' | chpasswd && \
   chsh -s $(which zsh) && \
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+  echo 'export COMPOSER_ALLOW_SUPERUSER=1' >> ~/.zshrc
 
 # Install Supervisor
 COPY --from=ochinchina/supervisord:latest /usr/local/bin/supervisord /usr/local/bin/supervisord
@@ -115,7 +117,8 @@ RUN wget https://getcomposer.org/composer-stable.phar && \
 # Install Magerun
 RUN wget https://files.magerun.net/n98-magerun2.phar && \
   mv n98-magerun2.phar /usr/local/bin/magerun2 && \
-  chmod +x /usr/local/bin/magerun2
+  chmod +x /usr/local/bin/magerun2 && \
+  ln -s /usr/local/bin/magerun2 /usr/local/bin/magerun
 
 # Copy source code
 COPY . ./

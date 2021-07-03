@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "628d65e21cb10a31ea800ca287377491",
+    "content-hash": "b566c6f7b0f33a41291589f1c2415952",
     "packages": [
+        {
+            "name": "avada/module-proofo",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Proofo/proofo-magento-2.git",
+                "reference": "b25831077338cac895d7403e03938606a2fadfb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Proofo/proofo-magento-2/zipball/b25831077338cac895d7403e03938606a2fadfb6",
+                "reference": "b25831077338cac895d7403e03938606a2fadfb6",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Avada\\Proofo\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Proofo Team",
+                    "email": "proofo@avada.io",
+                    "homepage": "https://proofo.io",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Proofo Social Proof",
+            "support": {
+                "issues": "https://github.com/Proofo/proofo-magento-2/issues",
+                "source": "https://github.com/Proofo/proofo-magento-2/tree/master"
+            },
+            "time": "2020-07-02T09:11:56+00:00"
+        },
         {
             "name": "aws/aws-sdk-php",
             "version": "3.185.6",
@@ -800,6 +842,89 @@
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
+            "name": "egeloen/http-adapter",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/egeloen/ivory-http-adapter.git",
+                "reference": "9641f11487ec26b24c6bbcee4f267cf62f60b855"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/egeloen/ivory-http-adapter/zipball/9641f11487ec26b24c6bbcee4f267cf62f60b855",
+                "reference": "9641f11487ec26b24c6bbcee4f267cf62f60b855",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.8",
+                "zendframework/zend-diactoros": "^1.1"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "^3.0.3",
+                "ext-curl": "*",
+                "guzzle/guzzle": "^3.9.4@dev",
+                "guzzlehttp/guzzle": "^4.1.4|^5.0|^6.0",
+                "kriswallsmith/buzz": "^0.13",
+                "nategood/httpful": "^0.2.17",
+                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit-mock-objects": "dev-matcher-verify as 2.3.x-dev",
+                "psr/log": "^1.0",
+                "react/dns": "^0.4.1",
+                "react/http-client": "^0.4",
+                "satooshi/php-coveralls": "^0.6",
+                "symfony/event-dispatcher": "^2.0",
+                "zendframework/zend-http": "^2.3.4",
+                "zendframework/zendframework1": ">=1.12.9,<=1.12.14|^1.12.16"
+            },
+            "suggest": {
+                "ext-curl": "Allows you to use the cURL adapter",
+                "ext-http": "Allows you to use the PECL adapter",
+                "guzzle/guzzle": "Allows you to use the Guzzle 3 adapter",
+                "guzzlehttp/guzzle": "Allows you to use the Guzzle 4 adapter",
+                "kriswallsmith/buzz": "Allows you to use the Buzz adapter",
+                "nategood/httpful": "Allows you to use the httpful adapter",
+                "psr/log": "Allows you to use the logger event subscriber",
+                "symfony/event-dispatcher": "Allows you to use the event lifecycle",
+                "symfony/stopwatch": "Allows you to use the stopwatch http adapter and event subscriber",
+                "zendframework/zend-http": "Allows you to use the Zend 2 adapter",
+                "zendframework/zendframework1": "Allows you to use the Zend 1 adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ivory\\HttpAdapter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric GELOEN",
+                    "email": "geloen.eric@gmail.com"
+                }
+            ],
+            "description": "Issue HTTP request for PHP 5.3+.",
+            "keywords": [
+                "http",
+                "http-adapter",
+                "http-client",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/egeloen/ivory-http-adapter/issues",
+                "source": "https://github.com/egeloen/ivory-http-adapter/tree/master"
+            },
+            "abandoned": "php-http/httplug",
+            "time": "2015-08-12T09:35:40+00:00"
+        },
+        {
             "name": "elasticsearch/elasticsearch",
             "version": "v7.7.0",
             "source": {
@@ -972,6 +1097,115 @@
                 "source": "https://github.com/ezimuel/ringphp/tree/1.1.2"
             },
             "time": "2020-02-14T23:51:21+00:00"
+        },
+        {
+            "name": "geoip2/geoip2",
+            "version": "v2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/GeoIP2-php.git",
+                "reference": "d01be5894a5c1a3381c58c9b1795cd07f96c30f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/GeoIP2-php/zipball/d01be5894a5c1a3381c58c9b1795cd07f96c30f7",
+                "reference": "d01be5894a5c1a3381c58c9b1795cd07f96c30f7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "maxmind-db/reader": "~1.8",
+                "maxmind/web-service-common": "~0.8",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.*",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeoIp2\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "https://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind GeoIP2 PHP API",
+            "homepage": "https://github.com/maxmind/GeoIP2-php",
+            "keywords": [
+                "IP",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "support": {
+                "issues": "https://github.com/maxmind/GeoIP2-php/issues",
+                "source": "https://github.com/maxmind/GeoIP2-php/tree/v2.11.0"
+            },
+            "time": "2020-10-01T18:48:34+00:00"
+        },
+        {
+            "name": "google/recaptcha",
+            "version": "1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/614f25a9038be4f3f2da7cbfd778dc5b357d2419",
+                "reference": "614f25a9038be4f3f2da7cbfd778dc5b357d2419",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.2.20|^2.15",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7.5.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+            "homepage": "https://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/recaptcha",
+                "issues": "https://github.com/google/recaptcha/issues",
+                "source": "https://github.com/google/recaptcha"
+            },
+            "time": "2020-03-31T17:50:54+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1175,6 +1409,117 @@
             "time": "2021-04-26T09:17:50+00:00"
         },
         {
+            "name": "hybridauth/hybridauth",
+            "version": "3.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hybridauth/hybridauth.git",
+                "reference": "0ec1b8cb8b230aae739422c5e42bc5733b3a7316"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/0ec1b8cb8b230aae739422c5e42bc5733b3a7316",
+                "reference": "0ec1b8cb8b230aae739422c5e42bc5733b3a7316",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^6.5 || ^8.0"
+            },
+            "suggest": {
+                "firebase/php-jwt": "Needed to support Apple provider",
+                "phpseclib/phpseclib": "Needed to support Apple provider"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hybridauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miled",
+                    "email": "hybridauth@gmail.com"
+                }
+            ],
+            "description": "PHP Social Authentication Library",
+            "homepage": "https://hybridauth.github.io",
+            "keywords": [
+                "Authentication",
+                "OpenId",
+                "api",
+                "apple",
+                "authorization",
+                "facebook",
+                "google",
+                "oauth",
+                "social",
+                "twitter"
+            ],
+            "support": {
+                "gitter": "https://gitter.im/hybridauth/hybridauth",
+                "issues": "https://github.com/hybridauth/hybridauth/issues",
+                "source": "https://github.com/hybridauth/hybridauth/tree/3.7.1"
+            },
+            "time": "2021-03-13T17:35:33+00:00"
+        },
+        {
+            "name": "igorw/get-in",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/get-in.git",
+                "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/igorw/get-in/zipball/170ded831f49abc6a6061f655aba9bdbcf7b8111",
+                "reference": "170ded831f49abc6a6061f655aba9bdbcf7b8111",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/get_in.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                }
+            ],
+            "description": "Functions for for hash map (assoc array) traversal.",
+            "keywords": [
+                "assoc-array",
+                "hash-map"
+            ],
+            "support": {
+                "issues": "https://github.com/igorw/get-in/issues",
+                "source": "https://github.com/igorw/get-in/tree/v1.0.3"
+            },
+            "time": "2014-12-15T23:03:51+00:00"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.10",
             "source": {
@@ -1243,6 +1588,63 @@
                 "source": "https://github.com/justinrainbow/json-schema/tree/5.2.10"
             },
             "time": "2020-05-27T16:41:55+00:00"
+        },
+        {
+            "name": "kiwicommerce/module-cron-scheduler",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kiwicommerce/magento2-cron-scheduler.git",
+                "reference": "38e50943732a60ab2ffbf23b4fd4108a9e1b2a99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kiwicommerce/magento2-cron-scheduler/zipball/38e50943732a60ab2ffbf23b4fd4108a9e1b2a99",
+                "reference": "38e50943732a60ab2ffbf23b4fd4108a9e1b2a99",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=100.0.0",
+                "magento/module-backend": ">=100.0.0",
+                "magento/module-cron": ">=100.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "KiwiCommerce\\CronScheduler\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kiwi Commerce Ltd",
+                    "email": "hello@kiwicommerce.co.uk",
+                    "homepage": "https://kiwicommerce.co.uk/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Easily set up and manage cron jobs from the backend with a beautiful and managed timeline feature. Find the actual load on CPU/Memory by cron job execution.",
+            "keywords": [
+                "admin",
+                "backend",
+                "cron",
+                "cronscheduler",
+                "magento 2",
+                "magento2",
+                "scheduler"
+            ],
+            "support": {
+                "issues": "https://github.com/kiwicommerce/magento2-cron-scheduler/issues",
+                "source": "https://github.com/kiwicommerce/magento2-cron-scheduler/tree/v1.0.8"
+            },
+            "abandoned": true,
+            "time": "2020-10-15T10:36:52+00:00"
         },
         {
             "name": "laminas/laminas-captcha",
@@ -4205,6 +4607,58 @@
             "time": "2021-01-18T20:58:21+00:00"
         },
         {
+            "name": "magenizr/magento2-resetuibookmarks",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magenizr/Magenizr_ResetUiBookmarks.git",
+                "reference": "747a587272bad2a48a43db7095d395b1ae87a49b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magenizr/Magenizr_ResetUiBookmarks/zipball/747a587272bad2a48a43db7095d395b1ae87a49b",
+                "reference": "747a587272bad2a48a43db7095d395b1ae87a49b",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^100|^101|^102|^103"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magenizr\\ResetUiBookmarks\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Magenizr",
+                    "email": "modules@magenizr.com",
+                    "homepage": "https://www.magenizr.com"
+                }
+            ],
+            "description": "This Magento 2 module allows you to reset your UI bookmarks such as state of filters, column positions, grid sorting, pagination and so on.",
+            "keywords": [
+                "UI Bookmarks",
+                "admin",
+                "backend",
+                "clear",
+                "flush",
+                "magento 2"
+            ],
+            "support": {
+                "issues": "https://github.com/magenizr/Magenizr_ResetUiBookmarks/issues",
+                "source": "https://github.com/magenizr/Magenizr_ResetUiBookmarks/tree/1.1.0"
+            },
+            "time": "2021-04-29T11:58:00+00:00"
+        },
+        {
             "name": "magento/composer",
             "version": "1.6.0",
             "dist": {
@@ -4560,6 +5014,342 @@
                 ],
                 "psr-4": {
                     "Magento\\GroupedProductSampleData\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory/magento-module-inventory-1.2.0.0.zip",
+                "shasum": "ae5f1fc099cc5ce12a2f59f14b253f65314179fb"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "1.2.*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\Inventory\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-api",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-api/magento-module-inventory-api-1.2.0.0.zip",
+                "shasum": "ca4572d294159c7ae13d2dff9bd583d82aea3510"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-catalog-api",
+            "version": "1.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-catalog-api/magento-module-inventory-catalog-api-1.3.0.0.zip",
+                "shasum": "0c027d19f9a29ce552c2643277e8b2c4c18bbf00"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-configuration-api",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-configuration-api/magento-module-inventory-configuration-api-1.2.0.0.zip",
+                "shasum": "795009498757246257c1afbad890c83c14f6c3d2"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfigurationApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-indexer",
+            "version": "2.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-indexer/magento-module-inventory-indexer-2.1.0.0.zip",
+                "shasum": "53a423428b23090ab944a1dcd5764659773c7399"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/framework-message-queue": "*",
+                "magento/module-inventory": "1.2.*",
+                "magento/module-inventory-api": "1.2.*",
+                "magento/module-inventory-catalog-api": "1.3.*",
+                "magento/module-inventory-multi-dimensional-indexer-api": "1.2.*",
+                "magento/module-inventory-sales": "1.2.*",
+                "magento/module-inventory-sales-api": "1.2.*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-catalog": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryIndexer\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-multi-dimensional-indexer-api",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-multi-dimensional-indexer-api/magento-module-inventory-multi-dimensional-indexer-api-1.2.0.0.zip",
+                "shasum": "6773bfe083fe98407da37780868819434de94c19"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryMultiDimensionalIndexerApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-reservations-api",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-reservations-api/magento-module-inventory-reservations-api-1.2.0.0.zip",
+                "shasum": "c174e45ee7deec04171d2e11ff25892c1bfb09a1"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryReservationsApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-sales",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-sales/magento-module-inventory-sales-1.2.0.0.zip",
+                "shasum": "223dfadbe119d8147ecbce08a6f9d446dc272819"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory": "1.2.*",
+                "magento/module-inventory-api": "1.2.*",
+                "magento/module-inventory-catalog-api": "1.3.*",
+                "magento/module-inventory-configuration-api": "1.2.*",
+                "magento/module-inventory-reservations-api": "1.2.*",
+                "magento/module-inventory-sales-api": "1.2.*",
+                "magento/module-inventory-source-deduction-api": "1.2.*",
+                "magento/module-inventory-source-selection-api": "1.4.*",
+                "magento/module-sales": "*",
+                "magento/module-sales-inventory": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "require-dev": {
+                "magento/module-inventory-indexer": "*"
+            },
+            "suggest": {
+                "magento/module-inventory-catalog": "1.2.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySales\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-sales-api",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-sales-api/magento-module-inventory-sales-api-1.2.0.0.zip",
+                "shasum": "a0a589db432b691f9e483bbc23e19590e9918e7a"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "1.2.*",
+                "magento/module-sales": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySalesApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-source-deduction-api",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-source-deduction-api/magento-module-inventory-source-deduction-api-1.2.0.0.zip",
+                "shasum": "44d8ae55170712fa762da7c5eb2adb4828fc86ef"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "1.2.*",
+                "magento/module-inventory-configuration-api": "1.2.*",
+                "magento/module-inventory-sales-api": "1.2.*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySourceDeductionApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A"
+        },
+        {
+            "name": "magento/module-inventory-source-selection-api",
+            "version": "1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/module-inventory-source-selection-api/magento-module-inventory-source-selection-api-1.4.0.0.zip",
+                "shasum": "f850fbfaa9901b2c2b76d0b42c19e16b2137354e"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "1.2.*",
+                "magento/module-inventory-sales-api": "1.2.*",
+                "magento/module-sales": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySourceSelectionApi\\": ""
                 }
             },
             "license": [
@@ -4974,6 +5764,1355 @@
                 "source": "https://github.com/magento/zf1/tree/1.14.5"
             },
             "time": "2020-12-02T21:12:59+00:00"
+        },
+        {
+            "name": "magepal/magento2-checkout-success-misc-script",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-checkout-success-misc-script.git",
+                "reference": "1789c35085a1a93adb88a6b5b3379546b1cfa463"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-checkout-success-misc-script/zipball/1789c35085a1a93adb88a6b5b3379546b1cfa463",
+                "reference": "1789c35085a1a93adb88a6b5b3379546b1cfa463",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*|102.0.*|103.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*|101.0.*|102.0.*",
+                "magepal/magento2-core": ">=1.1.0",
+                "php": "~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0|~7.1.3|~7.2.0|~7.3.0|~7.4.0"
+            },
+            "suggest": {
+                "magepal/magento2-preview-checkout-success-page": "Preview checkout success page from admin"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\CheckoutSuccessMiscScript\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "http://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Add Miscellaneous HTML and JavaScript codes to Magento2 checkout confirmation page",
+            "homepage": "http://www.magepal.com/",
+            "keywords": [
+                "add js to confirmation page",
+                "checkout success page java scripts",
+                "checkout tags",
+                "magento 2",
+                "magento2 order confirmation tracking",
+                "magento2 scripts",
+                "order confirmation page javascript",
+                "success page",
+                "success page js"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-checkout-success-misc-script/issues/",
+                "source": "https://github.com/magepal/magento2-checkout-success-misc-script/tree/1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/magepal",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-02-23T20:59:07+00:00"
+        },
+        {
+            "name": "magepal/magento2-core",
+            "version": "1.1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-core.git",
+                "reference": "83fbffc0d540f82f55e0623719e08ecacc9c7e18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-core/zipball/83fbffc0d540f82f55e0623719e08ecacc9c7e18",
+                "reference": "83fbffc0d540f82f55e0623719e08ecacc9c7e18",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "https://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "MagePal core extension",
+            "homepage": "https://www.magepal.com/",
+            "keywords": [
+                "magento 2",
+                "magepal core extension"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-core/issues/",
+                "source": "https://github.com/magepal/magento2-core/tree/1.1.12"
+            },
+            "time": "2021-05-29T19:47:51+00:00"
+        },
+        {
+            "name": "magepal/magento2-customshippingrate",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-custom-shipping-rate.git",
+                "reference": "4cf5807c9141b508873d2dec5886b40ebdcc8b32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-custom-shipping-rate/zipball/4cf5807c9141b508873d2dec5886b40ebdcc8b32",
+                "reference": "4cf5807c9141b508873d2dec5886b40ebdcc8b32",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*|102.0.*|103.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*|101.0.*|102.0.*",
+                "magepal/magento2-core": ">=1.1.10",
+                "php": "~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0|~7.1.3|~7.2.0|~7.3.0|~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\CustomShippingRate\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "http://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Set your own Custom Shipping rates for admin order or create predefined shipping methods for frontend customers",
+            "homepage": "http://www.magepal.com/",
+            "keywords": [
+                "custom shipping",
+                "custom shipping module",
+                "free shipping",
+                "magento 2",
+                "magento 2 free shipping extension",
+                "magento shipping",
+                "magento2",
+                "magento2 how to create custom shipping method",
+                "magento2 shipping extension",
+                "magento2 shipping module",
+                "shipping",
+                "shipping extension",
+                "shipping method",
+                "shipping rates"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-custom-shipping-rate/issues/",
+                "source": "https://github.com/magepal/magento2-custom-shipping-rate/tree/1.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/magepal",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-02-27T03:37:29+00:00"
+        },
+        {
+            "name": "magepal/magento2-edit-order-email",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-edit-order-email.git",
+                "reference": "e3fd4e954df4d6e0103c2e732e5d3bdffeca44ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-edit-order-email/zipball/e3fd4e954df4d6e0103c2e732e5d3bdffeca44ef",
+                "reference": "e3fd4e954df4d6e0103c2e732e5d3bdffeca44ef",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*|102.0.*|103.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*|101.0.*|102.0.*",
+                "magepal/magento2-core": ">=1.1.10",
+                "php": "~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0|~7.1.3|~7.2.0|~7.3.0|~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\EditOrderEmail\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "http://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Magento 2 edit order email",
+            "homepage": "https://www.magepal.com/",
+            "keywords": [
+                "change email address",
+                "change order email",
+                "edit order email",
+                "how to change order email",
+                "magento 2",
+                "wrong order email"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-edit-order-email/issues/",
+                "source": "https://github.com/magepal/magento2-edit-order-email/tree/1.1.6"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/magepal",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-02-27T13:34:31+00:00"
+        },
+        {
+            "name": "magepal/magento2-googletagmanager",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-google-tag-manager.git",
+                "reference": "e18f31c129492d58ac127751f1c6c390d67b46ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-google-tag-manager/zipball/e18f31c129492d58ac127751f1c6c390d67b46ca",
+                "reference": "e18f31c129492d58ac127751f1c6c390d67b46ca",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*|102.0.*|103.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*|101.0.*|102.0.*",
+                "magepal/magento2-core": ">=1.1.11",
+                "php": "7.0.2|7.0.4|~7.0.6|~7.1.0|~7.1.3|~7.2.0|~7.3.0|~7.4.0"
+            },
+            "suggest": {
+                "magepal/magento2-enhanced-ecommerce": "Get more from Google Tag Manager with Enhanced E-commerce. Learn more at https://www.magepal.com/enhanced-ecommerce-for-google-tag-manager.html"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\GoogleTagManager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "https://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Google Tag Manager (GTM) for Magento 2 with Advance Data Layer",
+            "homepage": "https://www.magepal.com/google-tag-manager.html",
+            "keywords": [
+                "Google Tag Manager",
+                "data layer",
+                "ga",
+                "ga tag manager",
+                "google analytics",
+                "gtm",
+                "integrate gtm magento",
+                "magento 2",
+                "magento gtm",
+                "magento tag manager",
+                "magento2",
+                "magento2 analytics",
+                "order conversion gtm magento",
+                "tag manager"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-google-tag-manager/issues/",
+                "source": "https://github.com/magepal/magento2-google-tag-manager/tree/2.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.magepal.com/google-tag-manager.html?utm_source=gtm&utm_medium=github%20sponsor",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-05-18T02:04:19+00:00"
+        },
+        {
+            "name": "magepal/magento2-newsletter-signup-email",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-newsletter-signup-email.git",
+                "reference": "48a69f5bae749a30a2fe35cb7231107e5bbd40c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-newsletter-signup-email/zipball/48a69f5bae749a30a2fe35cb7231107e5bbd40c4",
+                "reference": "48a69f5bae749a30a2fe35cb7231107e5bbd40c4",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*|102.0.*|103.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*|101.0.*|102.0.*",
+                "magento/module-newsletter": "*",
+                "magepal/magento2-core": ">=1.1.10",
+                "php": "~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0|~7.1.3|~7.2.0|~7.3.0|~7.4.0"
+            },
+            "default-branch": true,
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\NewsletterSignupEmail\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "https://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Enable/Disable Newsletter Signup Email",
+            "homepage": "https://www.magepal.com/",
+            "keywords": [
+                "magento 2",
+                "magento2 newsletter",
+                "newsletter"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-newsletter-signup-email/issues/",
+                "source": "https://github.com/magepal/magento2-newsletter-signup-email/tree/master"
+            },
+            "time": "2021-03-02T04:05:39+00:00"
+        },
+        {
+            "name": "magepal/magento2-reindex",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magepal/magento2-reindex.git",
+                "reference": "a9b85bb4bab41767a9d99b8f1bbd64e368b35403"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magepal/magento2-reindex/zipball/a9b85bb4bab41767a9d99b8f1bbd64e368b35403",
+                "reference": "a9b85bb4bab41767a9d99b8f1bbd64e368b35403",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*|101.0.*|102.0.*|103.0.*",
+                "magento/module-backend": "100.0.*|100.1.*|100.2.*|101.0.*|102.0.*",
+                "magepal/magento2-core": ">1.1.8",
+                "php": "~7.1.0|~7.1.3|~7.2.0|~7.3.0|~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagePal\\Reindex\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Renon Stewart",
+                    "email": "renon@magepal.com",
+                    "homepage": "http://www.magepal.com/",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Reindex your Magento2 store quickly and easily from backend/admin, instead of command line.",
+            "homepage": "http://www.magepal.com/",
+            "keywords": [
+                "admin reindex",
+                "backend reindex",
+                "magento 2",
+                "magento2",
+                "reindex"
+            ],
+            "support": {
+                "email": "support@magepal.com",
+                "issues": "https://github.com/magepal/magento2-reindex/issues/",
+                "source": "https://github.com/magepal/magento2-reindex/tree/1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.magepal.com/reindex.html?utm_source=reindex&utm_medium=github%20sponsor",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-01-06T01:08:37+00:00"
+        },
+        {
+            "name": "mageplaza/magento-2-product-slider",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-product-slider.git",
+                "reference": "8501db11dfa6a477468e0bc73d4aba120bfc261f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-product-slider/zipball/8501db11dfa6a477468e0bc73d4aba120bfc261f",
+                "reference": "8501db11dfa6a477468e0bc73d4aba120bfc261f",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Productslider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Product Slider",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-product-slider/issues",
+                "source": "https://github.com/mageplaza/magento-2-product-slider/tree/v4.0.1"
+            },
+            "time": "2021-06-02T16:47:59+00:00"
+        },
+        {
+            "name": "mageplaza/magento-2-seo-extension",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-seo.git",
+                "reference": "7cf93c4a568f7e7154a1c20dfffecc85d62dfc44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-seo/zipball/7cf93c4a568f7e7154a1c20dfffecc85d62dfc44",
+                "reference": "7cf93c4a568f7e7154a1c20dfffecc85d62dfc44",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Seo\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 SEO extension",
+            "keywords": [
+                "magento 2",
+                "magento 2 seo",
+                "mageplaza",
+                "seo"
+            ],
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-seo/issues",
+                "source": "https://github.com/mageplaza/magento-2-seo/tree/v4.1.0"
+            },
+            "time": "2021-04-01T10:31:53+00:00"
+        },
+        {
+            "name": "mageplaza/module-banner-slider",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-banner-slider.git",
+                "reference": "d992ae0abd5466d71015a5db45e2e3c9222468dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-banner-slider/zipball/d992ae0abd5466d71015a5db45e2e3c9222468dc",
+                "reference": "d992ae0abd5466d71015a5db45e2e3c9222468dc",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\BannerSlider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Banner Slider extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-banner-slider/issues",
+                "source": "https://github.com/mageplaza/magento-2-banner-slider/tree/v4.0.1"
+            },
+            "time": "2021-05-31T12:07:01+00:00"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "d050c9f35b04197e97b6747d7dbf1f164b1f26fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/d050c9f35b04197e97b6747d7dbf1f164b1f26fe",
+                "reference": "d050c9f35b04197e97b6747d7dbf1f164b1f26fe",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "support": {
+                "issues": "https://github.com/mageplaza/module-core/issues",
+                "source": "https://github.com/mageplaza/module-core/tree/v1.4.10"
+            },
+            "time": "2020-12-07T08:10:17+00:00"
+        },
+        {
+            "name": "mageplaza/module-delete-orders",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-delete-orders.git",
+                "reference": "ca5983ed516e58625f1a32c78faacfe2d6830f97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-delete-orders/zipball/ca5983ed516e58625f1a32c78faacfe2d6830f97",
+                "reference": "ca5983ed516e58625f1a32c78faacfe2d6830f97",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\DeleteOrders\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Delete Orders extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-delete-orders/issues",
+                "source": "https://github.com/mageplaza/magento-2-delete-orders/tree/v4.0.0"
+            },
+            "time": "2021-04-02T04:28:02+00:00"
+        },
+        {
+            "name": "mageplaza/module-gdpr",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-gdpr.git",
+                "reference": "15407be87a2849d5448749e3af954b0de3e7109a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-gdpr/zipball/15407be87a2849d5448749e3af954b0de3e7109a",
+                "reference": "15407be87a2849d5448749e3af954b0de3e7109a",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Gdpr\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 GDPR Extensions",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-gdpr/issues",
+                "source": "https://github.com/mageplaza/magento-2-gdpr/tree/v4.0.0"
+            },
+            "time": "2020-11-10T08:16:21+00:00"
+        },
+        {
+            "name": "mageplaza/module-google-maps",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-google-maps.git",
+                "reference": "2cfdaefef4774c8a277e5614cd05e9876486d19c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-google-maps/zipball/2cfdaefef4774c8a277e5614cd05e9876486d19c",
+                "reference": "2cfdaefef4774c8a277e5614cd05e9876486d19c",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\GoogleMaps\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Google Maps Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-google-maps/issues",
+                "source": "https://github.com/mageplaza/magento-2-google-maps/tree/v4.0.1"
+            },
+            "time": "2021-06-06T10:46:31+00:00"
+        },
+        {
+            "name": "mageplaza/module-google-recaptcha",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-google-recaptcha.git",
+                "reference": "d43afa45540926ffa7250d02f63b4d19ba2a6668"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-google-recaptcha/zipball/d43afa45540926ffa7250d02f63b4d19ba2a6668",
+                "reference": "d43afa45540926ffa7250d02f63b4d19ba2a6668",
+                "shasum": ""
+            },
+            "require": {
+                "google/recaptcha": "^1.2",
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\GoogleRecaptcha\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Google Recaptcha Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-google-recaptcha/issues",
+                "source": "https://github.com/mageplaza/magento-2-google-recaptcha/tree/v4.0.1"
+            },
+            "time": "2021-06-06T09:39:26+00:00"
+        },
+        {
+            "name": "mageplaza/module-instagram-feed",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-instagram-feed.git",
+                "reference": "4a6e172186cf92cc270ff7a04b16113eaf06bc5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-instagram-feed/zipball/4a6e172186cf92cc270ff7a04b16113eaf06bc5a",
+                "reference": "4a6e172186cf92cc270ff7a04b16113eaf06bc5a",
+                "shasum": ""
+            },
+            "require": {
+                "avada/module-proofo": "^1.0.2",
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\InstagramFeed\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Instagram Feed Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-instagram-feed/issues",
+                "source": "https://github.com/mageplaza/magento-2-instagram-feed/tree/v4.0.1"
+            },
+            "time": "2020-12-31T07:40:14+00:00"
+        },
+        {
+            "name": "mageplaza/module-lazy-loading",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-lazy-loading.git",
+                "reference": "4ffd7c717d84504c0b60a4fc41432935c632d5a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-lazy-loading/zipball/4ffd7c717d84504c0b60a4fc41432935c632d5a0",
+                "reference": "4ffd7c717d84504c0b60a4fc41432935c632d5a0",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\LazyLoading\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Mageplaza Lazy Loading Images Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-lazy-loading/issues",
+                "source": "https://github.com/mageplaza/magento-2-lazy-loading/tree/v1.0.2"
+            },
+            "time": "2021-02-17T03:31:18+00:00"
+        },
+        {
+            "name": "mageplaza/module-login-as-customer",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-login-as-customer.git",
+                "reference": "c378319b78f1ad5669637d9174a55402bf1f5893"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-login-as-customer/zipball/c378319b78f1ad5669637d9174a55402bf1f5893",
+                "reference": "c378319b78f1ad5669637d9174a55402bf1f5893",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\LoginAsCustomer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Login As Customer Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-login-as-customer/issues",
+                "source": "https://github.com/mageplaza/magento-2-login-as-customer/tree/v4.0.1"
+            },
+            "time": "2021-04-16T07:59:47+00:00"
+        },
+        {
+            "name": "mageplaza/module-multi-flat-rates",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-multi-flat-rates.git",
+                "reference": "71fb849a102c3bb7de0a993b966c2450729b00af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-multi-flat-rates/zipball/71fb849a102c3bb7de0a993b966c2450729b00af",
+                "reference": "71fb849a102c3bb7de0a993b966c2450729b00af",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Multiflatrates\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Multi Flat Rates extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-multi-flat-rates/issues",
+                "source": "https://github.com/mageplaza/magento-2-multi-flat-rates/tree/v4.0.0"
+            },
+            "time": "2021-03-23T09:58:50+00:00"
+        },
+        {
+            "name": "mageplaza/module-reports",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-reports.git",
+                "reference": "1b1fd3b403ed4edb88584a2d22c84af6931bdb72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-reports/zipball/1b1fd3b403ed4edb88584a2d22c84af6931bdb72",
+                "reference": "1b1fd3b403ed4edb88584a2d22c84af6931bdb72",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Reports\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Reports Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-reports/issues",
+                "source": "https://github.com/mageplaza/magento-2-reports/tree/v4.1.0"
+            },
+            "time": "2021-05-26T03:35:34+00:00"
+        },
+        {
+            "name": "mageplaza/module-security",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-security.git",
+                "reference": "21b2d56430713be5c6a88fb0c2b148279bb80d82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-security/zipball/21b2d56430713be5c6a88fb0c2b148279bb80d82",
+                "reference": "21b2d56430713be5c6a88fb0c2b148279bb80d82",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5",
+                "mageplaza/module-google-recaptcha": "^4.0.0",
+                "mageplaza/module-two-factor-authentication": "^4.0.0",
+                "sinergi/browser-detector": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Security\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Mageplaza Security Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-security/issues",
+                "source": "https://github.com/mageplaza/magento-2-security/tree/v4.0.1"
+            },
+            "time": "2021-05-26T03:06:43+00:00"
+        },
+        {
+            "name": "mageplaza/module-sitemap",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-google-xml-sitemap.git",
+                "reference": "f0aeb4d9c2e6a9ea2454e6aafb86936abd7d359c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-google-xml-sitemap/zipball/f0aeb4d9c2e6a9ea2454e6aafb86936abd7d359c",
+                "reference": "f0aeb4d9c2e6a9ea2454e6aafb86936abd7d359c",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/magento-2-seo-extension": "^4.0.0",
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Sitemap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Google XML Sitemap extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-google-xml-sitemap/issues",
+                "source": "https://github.com/mageplaza/magento-2-google-xml-sitemap/tree/v4.0.0"
+            },
+            "time": "2020-11-02T08:05:31+00:00"
+        },
+        {
+            "name": "mageplaza/module-smtp",
+            "version": "4.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-smtp.git",
+                "reference": "fce6c599157754a513e8bf38fe15cca20a5c6ece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-smtp/zipball/fce6c599157754a513e8bf38fe15cca20a5c6ece",
+                "reference": "fce6c599157754a513e8bf38fe15cca20a5c6ece",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Smtp\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "SMTP Extension for Magento 2 helps the owner of store simply install SMTP (Simple Mail Transfer Protocol) server which transmits the messages into codes or numbers",
+            "keywords": [
+                "email settings",
+                "gmail smtp",
+                "magento 2",
+                "magento 2 smtp",
+                "magento smtp",
+                "mageplaza",
+                "smtp"
+            ],
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-smtp/issues",
+                "source": "https://github.com/mageplaza/magento-2-smtp/tree/v4.4.1"
+            },
+            "time": "2021-06-22T03:16:26+00:00"
+        },
+        {
+            "name": "mageplaza/module-two-factor-authentication",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-two-factor-authentication.git",
+                "reference": "6b97fdc993f96244e2bc0d5ca2351f82141e56b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-two-factor-authentication/zipball/6b97fdc993f96244e2bc0d5ca2351f82141e56b2",
+                "reference": "6b97fdc993f96244e2bc0d5ca2351f82141e56b2",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5",
+                "sinergi/browser-detector": "*",
+                "sonata-project/google-authenticator": "2.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\TwoFactorAuth\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Two Factors Authentication Extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-two-factor-authentication/issues",
+                "source": "https://github.com/mageplaza/magento-2-two-factor-authentication/tree/v4.0.1"
+            },
+            "time": "2021-05-05T07:37:05+00:00"
+        },
+        {
+            "name": "maxmind-db/reader",
+            "version": "v1.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+                "reference": "569bd44d97d30a4ec12c7793a33004a76d4caf18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/569bd44d97d30a4ec12c7793a33004a76d4caf18",
+                "reference": "569bd44d97d30a4ec12c7793a33004a76d4caf18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "conflict": {
+                "ext-maxminddb": "<1.10.1,>=2.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "*",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpstan/phpstan": "*",
+                "phpunit/phpcov": ">=6.0.0",
+                "phpunit/phpunit": ">=8.0.0,<10.0.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "suggest": {
+                "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Db\\": "src/MaxMind/Db"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "https://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind DB Reader API",
+            "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+            "keywords": [
+                "database",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "support": {
+                "issues": "https://github.com/maxmind/MaxMind-DB-Reader-php/issues",
+                "source": "https://github.com/maxmind/MaxMind-DB-Reader-php/tree/v1.10.1"
+            },
+            "time": "2021-04-14T17:49:35+00:00"
+        },
+        {
+            "name": "maxmind/web-service-common",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/web-service-common-php.git",
+                "reference": "32f274051c543fc865e5a84d3a2c703913641ea8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/web-service-common-php/zipball/32f274051c543fc865e5a84d3a2c703913641ea8",
+                "reference": "32f274051c543fc865e5a84d3a2c703913641ea8",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0.3",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.*",
+                "phpunit/phpunit": "^8.0 || ^9.0",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Exception\\": "src/Exception",
+                    "MaxMind\\WebService\\": "src/WebService"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory Oschwald",
+                    "email": "goschwald@maxmind.com"
+                }
+            ],
+            "description": "Internal MaxMind Web Service API",
+            "homepage": "https://github.com/maxmind/web-service-common-php",
+            "support": {
+                "issues": "https://github.com/maxmind/web-service-common-php/issues",
+                "source": "https://github.com/maxmind/web-service-common-php/tree/v0.8.1"
+            },
+            "time": "2020-11-02T17:00:53+00:00"
         },
         {
             "name": "monogo/magento-preload",
@@ -5825,6 +7964,91 @@
             "time": "2021-05-03T11:20:27+00:00"
         },
         {
+            "name": "quickpay/magento2",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/QuickPay/magento-v2.git",
+                "reference": "b3b017cb044ac01df4ffee38862a5694f0acc27c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/QuickPay/magento-v2/zipball/b3b017cb044ac01df4ffee38862a5694f0acc27c",
+                "reference": "b3b017cb044ac01df4ffee38862a5694f0acc27c",
+                "shasum": ""
+            },
+            "require": {
+                "quickpay/quickpay-php-client": "1.0.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "QuickPay\\Gateway\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Codemakers",
+                    "email": "domas@codemakers.dk"
+                }
+            ],
+            "description": "Implements integration with the QuickPay payment service provider.",
+            "support": {
+                "issues": "https://github.com/QuickPay/magento-v2/issues",
+                "source": "https://github.com/QuickPay/magento-v2/tree/2.1.2"
+            },
+            "time": "2021-06-22T17:43:33+00:00"
+        },
+        {
+            "name": "quickpay/quickpay-php-client",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/QuickPay/quickpay-php-client.git",
+                "reference": "de16898bf064b4ded20d2d33b3130d7ccde0ddc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/QuickPay/quickpay-php-client/zipball/de16898bf064b4ded20d2d33b3130d7ccde0ddc9",
+                "reference": "de16898bf064b4ded20d2d33b3130d7ccde0ddc9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*",
+                "satooshi/php-coveralls": "1.0.*",
+                "squizlabs/php_codesniffer": "2.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "QuickPay\\": "QuickPay/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP-SDK to communicate with the payment provider QuickPay",
+            "homepage": "https://github.com/QuickPay/quickpay-php-client",
+            "support": {
+                "issues": "https://github.com/QuickPay/quickpay-php-client/issues",
+                "source": "https://github.com/QuickPay/quickpay-php-client/tree/master"
+            },
+            "time": "2017-09-14T17:34:43+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -6005,6 +8229,252 @@
             "time": "2020-05-12T15:16:56+00:00"
         },
         {
+            "name": "rubic/magento2-module-clean-checkout",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckout.git",
+                "reference": "d90714a0909a495a7b1dedbcd2a13e5ae70030ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckout/zipball/d90714a0909a495a7b1dedbcd2a13e5ae70030ef",
+                "reference": "d90714a0909a495a7b1dedbcd2a13e5ae70030ef",
+                "shasum": ""
+            },
+            "require": {
+                "rubic/magento2-module-clean-checkout-autocomplete": "^2.0",
+                "rubic/magento2-module-clean-checkout-core": "^2.0",
+                "rubic/magento2-module-clean-checkout-geo": "^2.0",
+                "rubic/magento2-module-clean-checkout-newsletter": "^2.0",
+                "rubic/magento2-module-clean-checkout-social": "^2.0",
+                "rubic/magento2-module-clean-checkout-theme": "^2.0"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A drop-in replacement for the Magento 2 checkout.",
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckout/issues",
+                "source": "https://github.com/danslo/CleanCheckout/tree/master"
+            },
+            "time": "2018-04-10T16:32:19+00:00"
+        },
+        {
+            "name": "rubic/magento2-module-clean-checkout-autocomplete",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckoutAutocomplete.git",
+                "reference": "e41401eef4ee997f588383a0b7186e054ab07911"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckoutAutocomplete/zipball/e41401eef4ee997f588383a0b7186e054ab07911",
+                "reference": "e41401eef4ee997f588383a0b7186e054ab07911",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rubic\\CleanCheckoutAutocomplete\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckoutAutocomplete/issues",
+                "source": "https://github.com/danslo/CleanCheckoutAutocomplete/tree/master"
+            },
+            "time": "2018-06-27T10:54:10+00:00"
+        },
+        {
+            "name": "rubic/magento2-module-clean-checkout-core",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckoutCore.git",
+                "reference": "cf38862ba72db42c7d0fe31413665473ef65585b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckoutCore/zipball/cf38862ba72db42c7d0fe31413665473ef65585b",
+                "reference": "cf38862ba72db42c7d0fe31413665473ef65585b",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rubic\\CleanCheckout\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckoutCore/issues",
+                "source": "https://github.com/danslo/CleanCheckoutCore/tree/master"
+            },
+            "time": "2018-04-10T16:17:41+00:00"
+        },
+        {
+            "name": "rubic/magento2-module-clean-checkout-geo",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckoutGeo.git",
+                "reference": "7b12171306afa7c2b958710487e21ed6f23cb700"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckoutGeo/zipball/7b12171306afa7c2b958710487e21ed6f23cb700",
+                "reference": "7b12171306afa7c2b958710487e21ed6f23cb700",
+                "shasum": ""
+            },
+            "require": {
+                "geoip2/geoip2": "^2.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rubic\\CleanCheckoutGeo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckoutGeo/issues",
+                "source": "https://github.com/danslo/CleanCheckoutGeo/tree/master"
+            },
+            "time": "2019-08-07T12:08:50+00:00"
+        },
+        {
+            "name": "rubic/magento2-module-clean-checkout-newsletter",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckoutNewsletter.git",
+                "reference": "d1cb37aaf9c7b6fcf535b40cb02b39530fe278cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckoutNewsletter/zipball/d1cb37aaf9c7b6fcf535b40cb02b39530fe278cb",
+                "reference": "d1cb37aaf9c7b6fcf535b40cb02b39530fe278cb",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=102.0.0",
+                "magento/module-checkout": ">=100.3.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rubic\\CleanCheckoutNewsletter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckoutNewsletter/issues",
+                "source": "https://github.com/danslo/CleanCheckoutNewsletter/tree/v2.1.0"
+            },
+            "time": "2020-12-04T11:41:56+00:00"
+        },
+        {
+            "name": "rubic/magento2-module-clean-checkout-social",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckoutSocial.git",
+                "reference": "6db639b843430db021cebb79d3dbff420b3e5203"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckoutSocial/zipball/6db639b843430db021cebb79d3dbff420b3e5203",
+                "reference": "6db639b843430db021cebb79d3dbff420b3e5203",
+                "shasum": ""
+            },
+            "require": {
+                "hybridauth/hybridauth": "^3.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rubic\\CleanCheckoutSocial\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckoutSocial/issues",
+                "source": "https://github.com/danslo/CleanCheckoutSocial/tree/master"
+            },
+            "time": "2018-04-10T16:49:55+00:00"
+        },
+        {
+            "name": "rubic/magento2-module-clean-checkout-theme",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danslo/CleanCheckoutTheme.git",
+                "reference": "c69563e171fb640d82b149f155222ab6fa848a74"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danslo/CleanCheckoutTheme/zipball/c69563e171fb640d82b149f155222ab6fa848a74",
+                "reference": "c69563e171fb640d82b149f155222ab6fa848a74",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": ">=102.0.0",
+                "magento/module-checkout": ">=100.3.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Rubic\\CleanCheckoutTheme\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/danslo/CleanCheckoutTheme/issues",
+                "source": "https://github.com/danslo/CleanCheckoutTheme/tree/v2.1.1"
+            },
+            "time": "2020-11-18T18:19:28+00:00"
+        },
+        {
             "name": "seld/jsonlint",
             "version": "1.8.3",
             "source": {
@@ -6114,6 +8584,552 @@
                 "source": "https://github.com/Seldaek/phar-utils/tree/master"
             },
             "time": "2020-07-07T18:42:57+00:00"
+        },
+        {
+            "name": "sinergi/browser-detector",
+            "version": "6.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sinergi/php-browser-detector.git",
+                "reference": "16cad9cafdd5bde8cc03d9ad4cc826988a67401e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sinergi/php-browser-detector/zipball/16cad9cafdd5bde8cc03d9ad4cc826988a67401e",
+                "reference": "16cad9cafdd5bde8cc03d9ad4cc826988a67401e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0 || ^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sinergi\\BrowserDetector\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Bull",
+                    "email": "me@gabrielbull.com"
+                },
+                {
+                    "name": "Chris Schuld"
+                }
+            ],
+            "description": "Detecting the user's browser, operating system and language.",
+            "keywords": [
+                "browser",
+                "detection",
+                "language",
+                "operating system",
+                "os"
+            ],
+            "support": {
+                "issues": "https://github.com/sinergi/php-browser-detector/issues",
+                "source": "https://github.com/sinergi/php-browser-detector/tree/6.1.3"
+            },
+            "time": "2020-10-29T15:55:28+00:00"
+        },
+        {
+            "name": "smile/elasticsuite",
+            "version": "2.10.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/elasticsuite.git",
+                "reference": "ddb32cece156cfa7f84b4c54fea26411e29d315e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/elasticsuite/zipball/ddb32cece156cfa7f84b4c54fea26411e29d315e",
+                "reference": "ddb32cece156cfa7f84b4c54fea26411e29d315e",
+                "shasum": ""
+            },
+            "require": {
+                "elasticsearch/elasticsearch": "~6.7|~7.2",
+                "magento/framework": ">=103.0.0",
+                "magento/magento-composer-installer": "*",
+                "magento/module-backend": ">=102.0.0",
+                "magento/module-catalog": ">=104.0.0",
+                "magento/module-catalog-graph-ql": ">=100.4.0",
+                "magento/module-catalog-search": ">=102.0.0",
+                "magento/module-inventory-indexer": ">=2.0.0",
+                "magento/module-inventory-sales": ">=1.1.0",
+                "magento/module-inventory-sales-api": ">=1.1.0",
+                "magento/module-store": ">=101.1.0"
+            },
+            "replace": {
+                "smile/module-elasticsuite-admin-notification": "self.version",
+                "smile/module-elasticsuite-analytics": "self.version",
+                "smile/module-elasticsuite-catalog": "self.version",
+                "smile/module-elasticsuite-catalog-graph-ql": "self.version",
+                "smile/module-elasticsuite-catalog-optimizer": "self.version",
+                "smile/module-elasticsuite-catalog-rule": "self.version",
+                "smile/module-elasticsuite-core": "self.version",
+                "smile/module-elasticsuite-indices": "self.version",
+                "smile/module-elasticsuite-swatches": "self.version",
+                "smile/module-elasticsuite-thesaurus": "self.version",
+                "smile/module-elasticsuite-tracker": "self.version",
+                "smile/module-elasticsuite-virtual-category": "self.version"
+            },
+            "require-dev": {
+                "smile/magento2-smilelab-quality-suite": "~2.2.0"
+            },
+            "type": "magento2-component",
+            "extra": {
+                "map": [
+                    [
+                        "src/lib/web/fonts/elasticsuite",
+                        "lib/web/fonts/elasticsuite"
+                    ]
+                ],
+                "branch-alias": {
+                    "dev-master": "2.11.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/module-elasticsuite-core/registration.php",
+                    "src/module-elasticsuite-admin-notification/registration.php",
+                    "src/module-elasticsuite-analytics/registration.php",
+                    "src/module-elasticsuite-catalog/registration.php",
+                    "src/module-elasticsuite-catalog-graph-ql/registration.php",
+                    "src/module-elasticsuite-catalog-optimizer/registration.php",
+                    "src/module-elasticsuite-catalog-rule/registration.php",
+                    "src/module-elasticsuite-indices/registration.php",
+                    "src/module-elasticsuite-swatches/registration.php",
+                    "src/module-elasticsuite-thesaurus/registration.php",
+                    "src/module-elasticsuite-tracker/registration.php",
+                    "src/module-elasticsuite-virtual-category/registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\ElasticsuiteCore\\": "src/module-elasticsuite-core",
+                    "Smile\\ElasticsuiteAdminNotification\\": "src/module-elasticsuite-admin-notification",
+                    "Smile\\ElasticsuiteAnalytics\\": "src/module-elasticsuite-analytics",
+                    "Smile\\ElasticsuiteCatalog\\": "src/module-elasticsuite-catalog",
+                    "Smile\\ElasticsuiteCatalogGraphQl\\": "src/module-elasticsuite-catalog-graph-ql",
+                    "Smile\\ElasticsuiteCatalogOptimizer\\": "src/module-elasticsuite-catalog-optimizer",
+                    "Smile\\ElasticsuiteCatalogRule\\": "src/module-elasticsuite-catalog-rule",
+                    "Smile\\ElasticsuiteIndices\\": "src/module-elasticsuite-indices",
+                    "Smile\\ElasticsuiteSwatches\\": "src/module-elasticsuite-swatches",
+                    "Smile\\ElasticsuiteThesaurus\\": "src/module-elasticsuite-thesaurus",
+                    "Smile\\ElasticsuiteTracker\\": "src/module-elasticsuite-tracker",
+                    "Smile\\ElasticsuiteVirtualCategory\\": "src/module-elasticsuite-virtual-category"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Romain Ruaud",
+                    "email": "romain.ruaud@smile.fr"
+                },
+                {
+                    "name": "Richard Bayet",
+                    "email": "richard.bayet@smile.fr"
+                },
+                {
+                    "name": "Aurélien FOUCRET",
+                    "email": "aurelien.foucret@smile.fr"
+                }
+            ],
+            "description": "Magento 2 merchandising and search engine built on ElasticSearch ",
+            "homepage": "https://github.com/Smile-SA/elasticsuite",
+            "keywords": [
+                "core",
+                "elasticsearch",
+                "graphql",
+                "magento",
+                "magento2",
+                "merchandising",
+                "search",
+                "setup"
+            ],
+            "support": {
+                "issues": "https://github.com/Smile-SA/elasticsuite/issues",
+                "source": "https://github.com/Smile-SA/elasticsuite/tree/2.10.4"
+            },
+            "time": "2021-04-30T09:01:50+00:00"
+        },
+        {
+            "name": "smile/module-map",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/magento2-module-map.git",
+                "reference": "f9f43124c05032c2a776000f6e939639751231e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/magento2-module-map/zipball/f9f43124c05032c2a776000f6e939639751231e8",
+                "reference": "f9f43124c05032c2a776000f6e939639751231e8",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-store": "*",
+                "willdurand/geocoder": "^3.3"
+            },
+            "require-dev": {
+                "smile/magento2-smilelab-quality-suite": "1.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\Map\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Aurélien FOUCRET",
+                    "email": "aurelien.foucret@smile.fr"
+                },
+                {
+                    "name": "Romain Ruaud",
+                    "email": "romain.ruaud@smile.fr"
+                },
+                {
+                    "name": "Guillaume Vrac",
+                    "email": "guillaume.vrac@smile.fr"
+                }
+            ],
+            "description": "Smile Map Utilities Module",
+            "keywords": [
+                "geocoding",
+                "geolocalisation",
+                "magento2",
+                "map"
+            ],
+            "support": {
+                "issues": "https://github.com/Smile-SA/magento2-module-map/issues",
+                "source": "https://github.com/Smile-SA/magento2-module-map/tree/2.0.3"
+            },
+            "time": "2020-08-19T13:28:02+00:00"
+        },
+        {
+            "name": "smile/module-retailer",
+            "version": "1.2.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/magento2-module-retailer.git",
+                "reference": "2260c2ed70dce02fdf064fca7b675160169fe6e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/magento2-module-retailer/zipball/2260c2ed70dce02fdf064fca7b675160169fe6e6",
+                "reference": "2260c2ed70dce02fdf064fca7b675160169fe6e6",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/magento-composer-installer": "*",
+                "magento/module-eav": "*",
+                "magento/module-store": "*",
+                "smile/module-seller": "~1.2.0"
+            },
+            "require-dev": {
+                "smile/magento2-smilelab-quality-suite": "1.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\Retailer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Aurélien Foucret",
+                    "email": "aurelien.foucret@smile.fr"
+                },
+                {
+                    "name": "Romain Ruaud",
+                    "email": "romain.ruaud@smile.fr"
+                }
+            ],
+            "description": "Smile Retailer Suite - Retailer Module",
+            "keywords": [
+                "magento2",
+                "retailer",
+                "retailer suite",
+                "shop"
+            ],
+            "support": {
+                "issues": "https://github.com/Smile-SA/magento2-module-retailer/issues",
+                "source": "https://github.com/Smile-SA/magento2-module-retailer/tree/master"
+            },
+            "time": "2020-01-23T20:07:32+00:00"
+        },
+        {
+            "name": "smile/module-seller",
+            "version": "1.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/magento2-module-seller.git",
+                "reference": "1de7732ce66eef7e8b5ec2ec03200807f58b17e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/magento2-module-seller/zipball/1de7732ce66eef7e8b5ec2ec03200807f58b17e6",
+                "reference": "1de7732ce66eef7e8b5ec2ec03200807f58b17e6",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/magento-composer-installer": "*",
+                "magento/module-eav": "*",
+                "magento/module-store": "*"
+            },
+            "require-dev": {
+                "smile/magento2-smilelab-quality-suite": "1.0.0"
+            },
+            "type": "magento2-component",
+            "extra": {
+                "map": [
+                    [
+                        "lib/web/fonts/retailersuite",
+                        "lib/web/fonts/retailersuite"
+                    ]
+                ]
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\Seller\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Aurélien Foucret",
+                    "email": "aurelien.foucret@smile.fr"
+                },
+                {
+                    "name": "Romain Ruaud",
+                    "email": "romain.ruaud@smile.fr"
+                }
+            ],
+            "description": "Smile Retailer Suite - Seller Module",
+            "keywords": [
+                "magento2",
+                "retailer",
+                "retailer suite",
+                "seller",
+                "shop"
+            ],
+            "support": {
+                "issues": "https://github.com/Smile-SA/magento2-module-seller/issues",
+                "source": "https://github.com/Smile-SA/magento2-module-seller/tree/1.2.x"
+            },
+            "time": "2020-03-26T13:01:45+00:00"
+        },
+        {
+            "name": "smile/module-store-delivery",
+            "version": "1.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/magento2-module-store-delivery.git",
+                "reference": "8564d5ee318063fb572a2576982b34812f553331"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/magento2-module-store-delivery/zipball/8564d5ee318063fb572a2576982b34812f553331",
+                "reference": "8564d5ee318063fb572a2576982b34812f553331",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-checkout": "*",
+                "magento/module-store": "*",
+                "smile/module-store-locator": "~1.3.0 || ~2.0.0"
+            },
+            "require-dev": {
+                "smile/magento2-smilelab-quality-suite": "^1.0.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\StoreDelivery\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Romain Ruaud",
+                    "email": "romain.ruaud@smile.fr"
+                }
+            ],
+            "description": "Smile Store Delivery",
+            "keywords": [
+                "click in store",
+                "delivery in store",
+                "magento2",
+                "store delivery"
+            ],
+            "support": {
+                "issues": "https://github.com/Smile-SA/magento2-module-store-delivery/issues",
+                "source": "https://github.com/Smile-SA/magento2-module-store-delivery/tree/1.1.10"
+            },
+            "time": "2021-02-02T16:32:22+00:00"
+        },
+        {
+            "name": "smile/module-store-locator",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/magento2-module-store-locator.git",
+                "reference": "14655c0bd95ba360716205505efc8e94d743b4d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/magento2-module-store-locator/zipball/14655c0bd95ba360716205505efc8e94d743b4d8",
+                "reference": "14655c0bd95ba360716205505efc8e94d743b4d8",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-contact": "*",
+                "magento/module-store": "*",
+                "smile/module-map": "~1.1.0 || ~2.0",
+                "smile/module-retailer": "~1.2.0",
+                "willdurand/geocoder": "^3.3"
+            },
+            "require-dev": {
+                "smile/magento2-smilelab-quality-suite": "1.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\StoreLocator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Aurélien FOUCRET",
+                    "email": "aurelien.foucret@smile.fr"
+                },
+                {
+                    "name": "Romain Ruaud",
+                    "email": "romain.ruaud@smile.fr"
+                },
+                {
+                    "name": "Guillaume Vrac",
+                    "email": "guillaume.vrac@smile.fr"
+                }
+            ],
+            "description": "Smile Store Locator",
+            "keywords": [
+                "geocoding",
+                "geolocalisation",
+                "magento2",
+                "map",
+                "retail"
+            ],
+            "support": {
+                "issues": "https://github.com/Smile-SA/magento2-module-store-locator/issues",
+                "source": "https://github.com/Smile-SA/magento2-module-store-locator/tree/2.0.7"
+            },
+            "time": "2021-02-02T16:20:09+00:00"
+        },
+        {
+            "name": "sonata-project/google-authenticator",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sonata-project/GoogleAuthenticator.git",
+                "reference": "4d2ce1c8f0bbf6169e54634d6dda70d8e338471f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sonata-project/GoogleAuthenticator/zipball/4d2ce1c8f0bbf6169e54634d6dda70d8e338471f",
+                "reference": "4d2ce1c8f0bbf6169e54634d6dda70d8e338471f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "sllh/php-cs-fixer-styleci-bridge": "^2.1",
+                "symfony/phpunit-bridge": "~3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Google\\Authenticator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Stocker",
+                    "email": "me@chregu.tv"
+                },
+                {
+                    "name": "Andre DeMarre",
+                    "homepage": "http://www.devnetwork.net/viewtopic.php?f=50&t=94989"
+                },
+                {
+                    "name": "Thomas Rabaix",
+                    "email": "thomas.rabaix@gmail.com"
+                }
+            ],
+            "description": "Library to integrate Google Authenticator into a PHP project",
+            "homepage": "https://github.com/sonata-project/GoogleAuthenticator",
+            "keywords": [
+                "google authenticator"
+            ],
+            "support": {
+                "source": "https://github.com/sonata-project/GoogleAuthenticator/tree/2.0.0"
+            },
+            "time": "2017-06-05T08:44:54+00:00"
         },
         {
             "name": "symfony/console",
@@ -6268,6 +9284,79 @@
                 }
             ],
             "time": "2021-05-26T17:40:38+00:00"
+        },
+        {
+            "name": "symfony/dom-crawler",
+            "version": "v4.4.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dom-crawler.git",
+                "reference": "41d15bb6d6b95d2be763c514bb2494215d9c5eef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/41d15bb6d6b95d2be763c514bb2494215d9c5eef",
+                "reference": "41d15bb6d6b95d2be763c514bb2494215d9c5eef",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "masterminds/html5": "<2.6"
+            },
+            "require-dev": {
+                "masterminds/html5": "^2.6",
+                "symfony/css-selector": "^3.4|^4.0|^5.0"
+            },
+            "suggest": {
+                "symfony/css-selector": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\DomCrawler\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Eases DOM navigation for HTML and XML documents",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/dom-crawler/tree/v4.4.25"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-05-26T11:20:16+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -7420,6 +10509,55 @@
             "time": "2018-01-15T15:26:51+00:00"
         },
         {
+            "name": "viabillhq/module-payment",
+            "version": "4.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ViaBill-Integrations/ViaBill-Magento-2.git",
+                "reference": "ea86840f6c7c62261ff606cb36d1ef92255fe192"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ViaBill-Integrations/ViaBill-Magento-2/zipball/ea86840f6c7c62261ff606cb36d1ef92255fe192",
+                "reference": "ea86840f6c7c62261ff606cb36d1ef92255fe192",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "~102.0.0 || ~103.0.0",
+                "magento/module-checkout": "~100.2.0 || ~100.3.0 || ~100.4.0",
+                "magento/module-payment": "~100.2.0 || ~100.3.0 || ~100.4.0",
+                "magento/module-sales": "~102.0.0 || ~103.0.0 || ~104.0.0",
+                "psr/log": "~1.0",
+                "zendframework/zend-http": "^2.5.0"
+            },
+            "require-dev": {
+                "magento/marketplace-eqp": "~1.0",
+                "phpunit/phpunit": "~5.0.0"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "vaimo-module-category": "payment"
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Viabillhq\\Payment\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Viabill payment method for Magento 2.3.x and 2.4.x",
+            "support": {
+                "issues": "https://github.com/ViaBill-Integrations/ViaBill-Magento-2/issues",
+                "source": "https://github.com/ViaBill-Integrations/ViaBill-Magento-2/tree/4.0.10"
+            },
+            "time": "2021-03-11T07:39:11+00:00"
+        },
+        {
             "name": "webimpress/safe-writer",
             "version": "2.2.0",
             "source": {
@@ -7603,6 +10741,124 @@
                 "source": "https://github.com/wikimedia/less.php/tree/1.8.2"
             },
             "time": "2019-11-06T18:30:11+00:00"
+        },
+        {
+            "name": "willdurand/geocoder",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/php-common.git",
+                "reference": "ccc178e2984c0af24881faa0ffe515f20e5e8c23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geocoder-php/php-common/zipball/ccc178e2984c0af24881faa0ffe515f20e5e8c23",
+                "reference": "ccc178e2984c0af24881faa0ffe515f20e5e8c23",
+                "shasum": ""
+            },
+            "require": {
+                "egeloen/http-adapter": "~0.8",
+                "igorw/get-in": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "geoip2/geoip2": "~2.0",
+                "symfony/stopwatch": "~2.5"
+            },
+            "suggest": {
+                "ext-geoip": "Enabling the geoip extension allows you to use the MaxMindProvider.",
+                "geoip/geoip": "If you are going to use the MaxMindBinaryProvider (conflict with geoip extension).",
+                "geoip2/geoip2": "If you are going to use the GeoIP2DatabaseProvider.",
+                "symfony/stopwatch": "If you want to use the TimedGeocoder"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Geocoder": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William DURAND",
+                    "email": "william.durand1@gmail.com"
+                }
+            ],
+            "description": "The almost missing Geocoder PHP 5.4 library.",
+            "homepage": "http://geocoder-php.org",
+            "keywords": [
+                "abstraction",
+                "geocoder",
+                "geocoding",
+                "geoip"
+            ],
+            "support": {
+                "source": "https://github.com/geocoder-php/php-common/tree/v3.3.0"
+            },
+            "time": "2015-12-06T20:17:20+00:00"
+        },
+        {
+            "name": "yireo/magento2-linkpreload",
+            "version": "1.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yireo/Yireo_LinkPreload.git",
+                "reference": "1de334d0ef73a7c37140be355aad255d6e7d1dbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yireo/Yireo_LinkPreload/zipball/1de334d0ef73a7c37140be355aad255d6e7d1dbf",
+                "reference": "1de334d0ef73a7c37140be355aad255d6e7d1dbf",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^102.0|^103.0",
+                "magento/module-store": "^100.0|^101.0",
+                "php": ">=7.1",
+                "symfony/css-selector": "^2.7|^3.0|^4.0|^5.0",
+                "symfony/dom-crawler": "^2.7|^3.0|^4.0"
+            },
+            "require-dev": {
+                "composer/composer": "*@dev"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "psr-4": {
+                    "Yireo\\LinkPreload\\": ""
+                },
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jisse Reitsma (Yireo)",
+                    "email": "jisse@yireo.com"
+                }
+            ],
+            "description": "Magento 2 extension to set HTTP Link headers for primary resources to allow for HTTP/2 preloading",
+            "homepage": "https://www.yireo.com/software/magento-extensions/linkpreload",
+            "keywords": [
+                "composer-installer",
+                "magento"
+            ],
+            "support": {
+                "issues": "https://github.com/yireo/Yireo_LinkPreload/issues",
+                "source": "https://github.com/yireo/Yireo_LinkPreload/tree/1.4.10"
+            },
+            "time": "2021-06-15T16:17:43+00:00"
         }
     ],
     "packages-dev": [
@@ -9672,6 +12928,57 @@
                 "source": "https://github.com/Lusitanian/PHPoAuthLib/tree/master"
             },
             "time": "2018-02-14T22:37:14+00:00"
+        },
+        {
+            "name": "mage2tv/magento-cache-clean",
+            "version": "1.0.41",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mage2tv/magento-cache-clean.git",
+                "reference": "047ea72035b5b303d319ad91ef67d0c3133fc606"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mage2tv/magento-cache-clean/zipball/047ea72035b5b303d319ad91ef67d0c3133fc606",
+                "reference": "047ea72035b5b303d319ad91ef67d0c3133fc606",
+                "shasum": ""
+            },
+            "suggest": {
+                "magento/project-community-edition": "*"
+            },
+            "bin": [
+                "bin/cache-clean.js"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vinai Kopp",
+                    "email": "vinai@netzarbeiter.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "A faster drop in replacement for bin/magento cache:clean with file watcher",
+            "homepage": "https://github.com/mage2tv/magento-cache-clean",
+            "keywords": [
+                "development",
+                "magento",
+                "utility"
+            ],
+            "support": {
+                "issues": "https://github.com/mage2tv/magento-cache-clean/issues",
+                "source": "https://github.com/mage2tv/magento-cache-clean/tree/1.0.41"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/vinai",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-04-22T15:50:19+00:00"
         },
         {
             "name": "magento/magento-coding-standard",
@@ -13831,7 +17138,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "magepal/magento2-newsletter-signup-email": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -13846,6 +17155,7 @@
         "ext-intl": "*",
         "ext-mbstring": "*",
         "ext-openssl": "*",
+        "ext-pcntl": "*",
         "ext-pdo_mysql": "*",
         "ext-simplexml": "*",
         "ext-soap": "*",
@@ -13854,5 +17164,5 @@
         "lib-libxml": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

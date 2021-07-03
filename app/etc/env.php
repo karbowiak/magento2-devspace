@@ -26,10 +26,6 @@ return [
                 'active' => '1',
                 'driver_options' => [
                     1014 => false
-                ],
-                'profiler' => [
-                    'class' => 'Smile\\DebugToolbar\\DB\\Profiler',
-                    'enabled' => true
                 ]
             ]
         ]
@@ -40,7 +36,7 @@ return [
         ]
     ],
     'x-frame-options' => 'SAMEORIGIN',
-    'MAGE_MODE' => 'default',
+    'MAGE_MODE' => 'production',
     'session' => [
         'save' => 'redis',
         'redis' => [
@@ -126,6 +122,15 @@ return [
             'dev' => [
                 'debug' => [
                     'debug_logging' => null
+                ]
+            ],
+            'smile_elasticsuite_core_base_settings' => [
+                'es_client' => [
+                    'servers' => 'elasticsearch-coordinating-only.magento2.svc.cluster.local:9200',
+                    'enable_https_mode' => '0',
+                    'enable_http_auth' => '0',
+                    'http_auth_user' => '',
+                    'http_auth_pwd' => ''
                 ]
             ]
         ]

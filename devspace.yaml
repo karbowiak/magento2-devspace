@@ -139,17 +139,21 @@ deployments:
       values:
         global:
           kibanaEnabled: true
-        plugins: null # Comma separated list of plugins
+        plugins: analysis-phonetic # Comma separated list of plugins
         master:
+          heapSize: 256m
           replicas: 1
           persistence:
             size: 5Gi
         coordinating:
+          heapSize: 256m
           replicas: 1
         ingest:
+          heapSize: 256m
           enabled: false
           replicas: 1
         data:
+          heapSize: 256m
           enabled: true
           replicas: 1
           persistence:
@@ -318,17 +322,3 @@ commands:
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- zsh -c 'COMPOSER_ALLOW_SUPERUSER=1 composer install -o'"
   - name: unittests
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- ./vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist"
-
-hooks:
-  - command: "composer"
-    args:
-      - "install"
-      - "-o"
-    where:
-      container:
-        wait: true
-        labelSelector:
-          app.kubernetes.io/component: web
-    when:
-      after:
-        deployments: all

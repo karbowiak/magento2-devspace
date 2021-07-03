@@ -89,3 +89,6 @@ To install the bare developer setup, you simply run: `devspace run importdb` to 
 # Admin panel user/pass using bare database
 username: admin
 password: password123
+
+# MagePack
+images come with MagePack installed, refer to https://github.com/magesuite/magepack on how to use it
