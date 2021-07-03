@@ -63,7 +63,7 @@ RUN apt install -y php7.4 php7.4-readline php7.4-cli php7.4-common \
   php7.4-xdebug
 
 # Make Xdebug actually call out
-RUN echo "xdebug.start_with_request = yes" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
+RUN echo "xdebug.start_with_request = no" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
   echo "xdebug.client_host=127.0.0.1" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
   echo "xdebug.client_port = 9003" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini && \
   echo "xdebug.mode = debug" >> /etc/php/7.4/cli/conf.d/20-xdebug.ini

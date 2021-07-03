@@ -308,6 +308,8 @@ commands:
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- php bin/magento cache:clean && php bin/magento cache:flush"
   - name: wipe
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- rm -rf generated/* var/view_preprocessed/* pub/static/*"
+  - name: setupupgrade
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- php bin/magento setup:upgrade"
   - name: importdb
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- magerun2 db:import -c gzip .container/bare.database.sql.gz"
   - name: composer

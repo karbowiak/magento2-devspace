@@ -70,6 +70,15 @@
       "alignment": "left",
       "priority": 2,
       "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace run setupupgrade\u000d"}],
+      "text": "setup:upgrade",
+      "tooltip": "Runs php bin/magento setup:upgrade",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
     }
   ]
 }

@@ -71,6 +71,26 @@
         "league/flysystem-cached-adapter": "^1.0",
         "magento/composer": "1.6.0",
         "magento/magento-composer-installer": ">=0.1.11",
+        "magento/module-bundle-sample-data": "100.4.*",
+        "magento/module-catalog-rule-sample-data": "100.4.*",
+        "magento/module-catalog-sample-data": "100.4.*",
+        "magento/module-cms-sample-data": "100.4.*",
+        "magento/module-configurable-sample-data": "100.4.*",
+        "magento/module-customer-sample-data": "100.4.*",
+        "magento/module-downloadable-sample-data": "100.4.*",
+        "magento/module-grouped-product-sample-data": "100.4.*",
+        "magento/module-msrp-sample-data": "100.4.*",
+        "magento/module-offline-shipping-sample-data": "100.4.*",
+        "magento/module-product-links-sample-data": "100.4.*",
+        "magento/module-review-sample-data": "100.4.*",
+        "magento/module-sales-rule-sample-data": "100.4.*",
+        "magento/module-sales-sample-data": "100.4.*",
+        "magento/module-swatches-sample-data": "100.4.*",
+        "magento/module-tax-sample-data": "100.4.*",
+        "magento/module-theme-sample-data": "100.4.*",
+        "magento/module-widget-sample-data": "100.4.*",
+        "magento/module-wishlist-sample-data": "100.4.*",
+        "magento/sample-data-media": "100.4.*",
         "magento/zendframework1": "~1.14.2",
         "monogo/magento-preload": "^1.0",
         "monolog/monolog": "^1.17",
@@ -125,6 +145,7 @@
         "phpstan/phpstan": ">=0.12.3 <=0.12.23",
         "phpunit/phpunit": "^9",
         "sebastian/phpcpd": "~5.0.0",
+        "smile/module-debug-toolbar": "^5.0",
         "squizlabs/php_codesniffer": "^3.6",
         "symfony/var-dumper": "^5.3"
     },
@@ -371,6 +392,13 @@
         }
     },
     "prefer-stable": true,
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
     "extra": {
         "magento-force": "override",
         "magento-deploy-ignore": {
