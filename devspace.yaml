@@ -310,6 +310,8 @@ commands:
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- rm -rf generated/* var/view_preprocessed/* pub/static/*"
   - name: importdb
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- magerun2 db:import -c gzip .container/bare.database.sql.gz"
+  - name: composer
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- zsh -c 'COMPOSER_ALLOW_SUPERUSER=1 composer install -o'"
   - name: unittests
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- ./vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist"
 

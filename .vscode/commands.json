@@ -1,0 +1,48 @@
+{
+  "commands": [
+    {
+      "command": "commands.refresh",
+      "text": "$(sync)",
+      "tooltip": "Refresh commands",
+      "alignment": "left",
+      "priority": 0,
+      "color": "#FFCC00"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace run flush\u000d"}],
+      "text": "Flush Cache",
+      "tooltip": "Flush and Clean Magento2 cache",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace run wipe\u000d"}],
+      "text": "Wipe Generated",
+      "tooltip": "Delete generated/*, pub/static/* and var/view_preprocessed/*",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace run composer\u000d"}],
+      "text": "Install composer",
+      "tooltip": "Install composer packages",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace run unittests\u000d"}],
+      "text": "Run PHPUnit",
+      "tooltip": "Runs the default Magento2 unit tests",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    }
+  ]
+}
