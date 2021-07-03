@@ -10,6 +10,33 @@
     },
     {
       "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace dev -b\u000d"}],
+      "text": "Devspace (Build)",
+      "tooltip": "Launch Devspace in dev mode, and build containers",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace dev\u000d"}],
+      "text": "Devspace",
+      "tooltip": "Launch Devspace in dev mode",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
+      "arguments": [{"text": "devspace run cli\u000d"}],
+      "text": "CLi",
+      "tooltip": "Open CLI connection to container",
+      "alignment": "left",
+      "priority": 2,
+      "color": "#fff"
+    },
+    {
+      "command": "workbench.action.terminal.sendSequence",
       "arguments": [{"text": "devspace run flush\u000d"}],
       "text": "Flush Cache",
       "tooltip": "Flush and Clean Magento2 cache",
