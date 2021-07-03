@@ -310,8 +310,10 @@ commands:
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- rm -rf generated/* var/view_preprocessed/* pub/static/*"
   - name: setupupgrade
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- php bin/magento setup:upgrade"
-  - name: importdb
+  - name: importdbbare
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- magerun2 db:import -c gzip .container/bare.database.sql.gz"
+  - name: importdbsample
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- magerun2 db:import -c gzip .container/sample.database.sql.gz"
   - name: composer
     command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- zsh -c 'COMPOSER_ALLOW_SUPERUSER=1 composer install -o'"
   - name: unittests
