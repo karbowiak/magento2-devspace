@@ -125,7 +125,8 @@
         "phpstan/phpstan": ">=0.12.3 <=0.12.23",
         "phpunit/phpunit": "^9",
         "sebastian/phpcpd": "~5.0.0",
-        "squizlabs/php_codesniffer": "^3.6"
+        "squizlabs/php_codesniffer": "^3.6",
+        "symfony/var-dumper": "^5.3"
     },
     "conflict": {
         "gene/bluefoot": "*"

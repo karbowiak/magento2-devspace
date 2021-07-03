@@ -303,13 +303,15 @@ dev:
 
 commands:
   - name: cli
-    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web zsh"
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- zsh"
   - name: flush
-    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web php bin/magento cache:clean && php bin/magento cache:flush"
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- php bin/magento cache:clean && php bin/magento cache:flush"
   - name: wipe
-    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web rm -rf generated/* var/view_preprocessed/* pub/static/*"
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- rm -rf generated/* var/view_preprocessed/* pub/static/*"
   - name: importdb
-    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web magerun2 db:import .container/bare.database.sql"
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- magerun2 db:import -c gzip .container/bare.database.sql.gz"
+  - name: unittests
+    command: "devspace -n ${NAMESPACE} enter --label-selector app.kubernetes.io/component=web -- ./vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist"
 
 hooks:
   - command: "composer"
